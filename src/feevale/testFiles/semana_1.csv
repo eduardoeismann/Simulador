@@ -1,0 +1,51 @@
+﻿Atendimento PC;Computador;1;13:20;13:23;00:03;13:18;FALSE;Carlos
+Atendimento PC;Computador;1;09:23;09:25;00:02;08:50;FALSE;Carlos
+Atendimento PC;Computador;1;13:10;13:15;00:05;13:05;FALSE;Carlos
+Atendimento PC;Computador;1;13:00;13:15;00:15;12:55;FALSE;Carlos
+Atendimento PC;Computador;1;08:45;09:00;00:15;08:25;FALSE;Carlos
+Atendimento PC;Computador;1;09:15;09:47;00:32;08:45;FALSE;Carlos
+Atendimento PC;Computador;1;09:30;10:00;00:30;09:28;FALSE;Carlos
+Atendimento PC;Computador;1;10:15;10:40;00:25;09:25;FALSE;Carlos
+Manutenção Impressora;Impressora;1;11:00;11:30;00:30;10:50;FALSE;Carlos
+Configuração Rede;Internet;1;13:30;15:00;01:30;13:30;FALSE;Carlos
+Organizar Sala;Servidor/Infra;1;10:00;11:30;01:30;10:00;FALSE;Carlos
+Manutenção servidores;Servidor/Infra;1;12:00;13:15;01:15;12:00;FALSE;Carlos
+Manutenção servidores;Servidor/Infra;1;08:40;09:15;00:35;08:40;FALSE;Carlos
+Troca de cabos de servidores;Servidor/Infra;1;09:30;10:30;01:00;09:30;FALSE;Carlos
+Atendimento equipamento;Servidor/Infra;1;10:33;10:35;00:02;10:00;FALSE;Carlos
+Configuração Rede;Servidor/Infra;1;10:00;11:00;01:00;09:45;FALSE;Carlos
+Manutenção servidores;Servidor/Infra;1;11:00;12:00;01:00;11:00;FALSE;Carlos
+Atendimento equipamento;Servidor/Infra;1;10:10;11:30;01:20;10:10;FALSE;Carlos
+Orçamento HDs;Servidor/Infra;1;12:00;12:30;00:30;12:00;FALSE;Carlos
+Reunião;Servidor/Infra;1;15:30;16:40;01:10;15:30;FALSE;Carlos
+Reunião;Servidor/Infra;1;09:00;09:45;00:45;08:50;FALSE;Carlos
+Reunião;Servidor/Infra;1;13:00;14:15;01:15;12:50;FALSE;Carlos
+Cadastrar funcionario;indefinido;1;08:45;08:52;00:07;08:30;FALSE;Carlos
+Configuração Sistema;indefinido;1;11:10;11:25;00:15;11:08;FALSE;Carlos
+PC Sala de Reuniões;Computador;1;07:30;08:15;00:45;07:29;FALSE;Gustavo
+Atendimento PC;Computador;1;15:23;16:29;01:06;15:19;FALSE;Gustavo
+Atendimento PC;Computador;1;16:30;17:03;00:33;16:22;TRUE;Gustavo
+Atendimento PC;Computador;1;08:10;08:17;00:07;08:09;FALSE;Gustavo
+Atendimento PC;Computador;1;08:17;08:20;00:03;08:14;TRUE;Gustavo
+Atendimento PC;Computador;1;08:50;09:37;00:47;08:48;FALSE;Gustavo
+Atendimento PC;Computador;1;10:00;10:27;00:27;10:00;FALSE;Gustavo
+Atendimento PC;Computador;1;11:45;11:57;00:12;11:31;TRUE;Gustavo
+Atendimento PC;Computador;1;13:50;15:29;01:39;10:00;TRUE;Gustavo
+Atendimento PC;Computador;1;15:30;15:38;00:08;15:29;FALSE;Gustavo
+Atendimento PC;E-mail;1;09:30;11:00;01:30;09:29;FALSE;Gustavo
+Atendimento PC;E-mail;1;15:00;15:22;00:22;14:50;FALSE;Gustavo
+Atendimento PC;E-mail;1;14:03;15:50;01:47;13:50;FALSE;Gustavo
+Atendimento PC;Impressora;1;17:25;17:33;00:08;17:24;FALSE;Gustavo
+Atendimento equipamento;Impressora;1;15:49;17:04;01:15;15:49;FALSE;Gustavo
+Manutenção Impressora;Impressora;1;10:35;11:09;00:34;10:35;FALSE;Gustavo
+Relatorio Wendt;Relatórios;1;17:05;17:24;00:19;17:00;TRUE;Gustavo
+Relatorio Augusto;Relatórios;1;16:13;16:49;00:36;16:08;FALSE;Gustavo
+Manutenção servidores;Servidor/Infra;1;11:30;16:30;05:00;11:30;FALSE;Gustavo
+Manutenção servidores;Servidor/Infra;1;08:30;15:21;06:51;08:30;FALSE;Gustavo
+Atendimento equipamento;Servidor/Infra;1;15:22;15:43;00:21;15:19;FALSE;Gustavo
+Manutenção servidores;Servidor/Infra;1;10:01;11:57;01:56;10:00;FALSE;Gustavo
+Manutenção servidores;Servidor/Infra;1;12:58;15:05;02:07;13:00;FALSE;Gustavo
+Atendimento equipamento;Servidor/Infra;1;10:50;11:45;00:55;10:50;FALSE;Gustavo
+Orçamento Equipamentos;Servidor/Infra;1;09:05;09:23;00:18;09:05;FALSE;Gustavo
+Reunião;Servidor/Infra;1;09:00;09:47;00:47;09:00;FALSE;Gustavo
+Reunião;Servidor/Infra;1;13:00;13:53;00:53;13:00;FALSE;Gustavo
