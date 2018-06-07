@@ -13,14 +13,18 @@ public class Attendance {
 	 *     
 	**/
 	
-	public String nomeColaborador;
-	public String problemaAtendido;
-	public Calendar dataInicioAtendimento;
-	public Calendar dataFimAtendimento;
-	public Calendar horaInicioAtendimento;
-	public Calendar horaFimAtendimento;
-	public Calendar tempoTotalAtendimento;
-	public Boolean problemaResolvido;
+	private String problemaAtendido;
+	private String categoria;
+	private Integer prioridade;
+	private Calendar dataInicioAtendimento;
+	private Calendar dataFimAtendimento;
+	private Calendar horaInicioAtendimento;
+	private Calendar horaFimAtendimento;
+	private Calendar horaRecebido;
+	private String nomeColaborador;
+	private Boolean fila;
+	private Calendar tempoTotalAtendimento;
+	private Boolean problemaResolvido;
 	
 	public String getNomeColaborador() {
 		return nomeColaborador;
@@ -76,6 +80,38 @@ public class Attendance {
 	}
 	public void setProblemaResolvido(Boolean problemaResolvido) {
 		this.problemaResolvido = problemaResolvido;
+	}
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+	public Integer getPrioridade() {
+		return prioridade;
+	}
+
+	public void setPrioridade(Integer prioridade) {
+		this.prioridade = prioridade;
+	}
+
+	public Calendar getHoraRecebido() {
+		return horaRecebido;
+	}
+
+	public void setHoraRecebido(Calendar horaRecebido) {
+		this.horaRecebido = horaRecebido;
+	}
+
+	public Boolean getFila() {
+		return fila;
+	}
+
+	public void setFila(Boolean fila) {
+		this.fila = fila;
 	}
 	
 }

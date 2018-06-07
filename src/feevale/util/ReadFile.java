@@ -1,12 +1,13 @@
 package feevale.util;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
 import javax.swing.JFileChooser;
+
+import feevale.attendance.Attendance;
 
 public class ReadFile {
 	/**
@@ -18,7 +19,7 @@ public class ReadFile {
 	 *     
 	**/
 	
-	private static final String DELIMITADOR = ",";
+	private static final String DELIMITADOR = ";";
 	
 	public ReadFile() {
 		BufferedReader leDados = null;
@@ -37,16 +38,16 @@ public class ReadFile {
 			
 			while( ( linha = leDados.readLine() ) != null ) {
 				String[] dadosUsuario = linha.split( DELIMITADOR );
+				Attendance atendimento = new Attendance();
+				// Atividade;Categoria;Prioridade;Inicio;Fim;Duração;Horário do chamado;Fila;Colaborador
 				System.out.println( Arrays.toString( dadosUsuario ) );
-				
 			}
-			
+
 			leDados.close();
 			
 		} catch( Exception error ) {
 			System.out.println( "Erro ao receber arquivo de entrada. " );
 			error.printStackTrace();
-			
 		}
 		
 	}
