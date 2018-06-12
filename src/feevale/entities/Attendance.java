@@ -1,4 +1,4 @@
-package feevale.attendance;
+package feevale.entities;
 
 import java.time.LocalTime;
 import java.util.Calendar;
@@ -15,7 +15,7 @@ public class Attendance {
 	**/
 	
 	private String problemaAtendido;
-	private String categoria;
+	private Categoria categoria;
 	private Integer prioridade;
 	private Calendar dataInicioAtendimento;
 	private Calendar dataFimAtendimento;
@@ -91,11 +91,11 @@ public class Attendance {
 		this.problemaResolvido = problemaResolvido;
 	}
 
-	public String getCategoria() {
+	public Categoria getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(String categoria) {
+	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
 
