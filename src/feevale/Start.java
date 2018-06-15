@@ -17,9 +17,9 @@ public class Start {
 		final Categoria[] CAT_COLAB_C = { Categoria.COMPUTADOR, Categoria.IMPRESSORA, Categoria.INTERNET, Categoria.SERVIDOR_INFRA, Categoria.SEM_CATEGORIA };
 		final Categoria[] CAT_COLAB_G = { Categoria.COMPUTADOR, Categoria.EMAIL, Categoria.IMPRESSORA, Categoria.RELATORIOS, Categoria.SERVIDOR_INFRA };
 
-		Collaborator colaboradorC = new Collaborator("Carlos", LocalTime.of(8, 0), CAT_COLAB_C);
+		Collaborator colaboradorC = new Collaborator("Carlos", LocalTime.of(8, 0), Categoria.values());
 
-		Collaborator colaboradorG = new Collaborator("Gustavo", LocalTime.of(8, 0), CAT_COLAB_G);
+		Collaborator colaboradorG = new Collaborator("Gustavo", LocalTime.of(8, 0), Categoria.values());
 		
 		/**
 		 * Cenário 1: <br/>

@@ -62,6 +62,18 @@ public class Collaborator {
 
 	public void setTarefaAtual(Attendance tarefaAtual) {
 		this.tarefaAtual = tarefaAtual;
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+//				 long duration = tarefaAtual.getHoraFimAtendimento().minus(tarefaAtual.gethor).getTimeInMillis() - tarefaAtual.getDataInicioAtendimento().getTimeInMillis();
+				long duration = 100000000;
+				for (int i = 0; i < duration; i++) {
+					//
+				}
+				Collaborator.this.tarefaAtual = null;
+				System.out.println("Terminou...");
+			}
+		}).start();
 	}
 
 }

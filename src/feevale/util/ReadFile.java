@@ -1,6 +1,7 @@
 package feevale.util;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.time.LocalTime;
@@ -31,15 +32,18 @@ public class ReadFile {
 		String linha = null;
 
 		try {
-			JFileChooser arquivo = new JFileChooser();
-			arquivo.setDialogTitle( "Selecione o arquivo de dados" );
-			arquivo.setDialogType( JFileChooser.OPEN_DIALOG );
-			arquivo.setApproveButtonText( "OK" );
-			arquivo.setFileSelectionMode( JFileChooser.FILES_ONLY );
-			arquivo.setMultiSelectionEnabled( true );
-			arquivo.showOpenDialog( arquivo );
+//			JFileChooser arquivo = new JFileChooser();
+//			arquivo.setDialogTitle( "Selecione o arquivo de dados" );
+//			arquivo.setDialogType( JFileChooser.OPEN_DIALOG );
+//			arquivo.setApproveButtonText( "OK" );
+//			arquivo.setFileSelectionMode( JFileChooser.FILES_ONLY );
+//			arquivo.setMultiSelectionEnabled( true );
+//			arquivo.showOpenDialog( arquivo );
+
+			File file = new File("/Users/andresschultz/Desktop/semana_1.csv");
 			
-			leDados = new BufferedReader( new InputStreamReader( new FileInputStream( arquivo.getSelectedFile() ) ) );
+//			leDados = new BufferedReader( new InputStreamReader( new FileInputStream( arquivo.getSelectedFile() ) ) );
+			leDados = new BufferedReader( new InputStreamReader(new FileInputStream(file)));
 			
 			this.listAtendimento = new ArrayList<>();
 
