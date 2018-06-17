@@ -13,7 +13,7 @@ public class Attendance {
 	 *     atendimentos que foram coletados.
 	 *     
 	**/
-	
+
 	private String problemaAtendido;
 	private Categoria categoria;
 	private Integer prioridade;

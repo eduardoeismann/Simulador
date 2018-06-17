@@ -8,8 +8,6 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.JFileChooser;
-
 import feevale.entities.Attendance;
 import feevale.entities.Categoria;
 
@@ -22,7 +20,7 @@ public class ReadFile {
 	 *     simulador.
 	 *     
 	**/
-	
+
 	private static final String DELIMITADOR = ";";
 	
 	private List<Attendance> listAtendimento;

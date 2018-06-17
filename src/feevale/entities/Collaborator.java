@@ -1,5 +1,6 @@
 package feevale.entities;
 
+import java.time.Duration;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,32 +10,32 @@ public class Collaborator {
 
     private String nome;
 
-	private List<Categoria> especialidades;
+    private List<Categoria> especialidades;
 
     private LocalTime jornadaDiaria;
 
-	private Attendance tarefaAtual;
+    private Attendance tarefaAtual;
 
-	/**
-	 * Constructor of Collaborator
-	 * 
-	 * @param nome the name of collaborator
-	 * @param jornadaDiaria total daily working time. Example, to 8h 30min, put <code>LocalTime.of(8,30)</code>
-	 * @param categorias optional, add a list of Categoria (skills)
-	 */
-	public Collaborator(String nome, LocalTime jornadaDiaria, Categoria... categorias) {
-		this.nome = nome;
-		this.jornadaDiaria = jornadaDiaria;
-		if (categorias == null) {
-			this.especialidades = new ArrayList<>();
-		} else {
-			this.especialidades = Arrays.asList(categorias);
-		}
-	}
+    /**
+     * Constructor of Collaborator
+     *
+     * @param nome          the name of collaborator
+     * @param jornadaDiaria total daily working time. Example, to 8h 30min, put <code>LocalTime.of(8,30)</code>
+     * @param categorias    optional, add a list of Categoria (skills)
+     */
+    public Collaborator(String nome, LocalTime jornadaDiaria, Categoria... categorias) {
+        this.nome = nome;
+        this.jornadaDiaria = jornadaDiaria;
+        if (categorias == null) {
+            this.especialidades = new ArrayList<>();
+        } else {
+            this.especialidades = Arrays.asList(categorias);
+        }
+    }
 
-	public void novaEspecialidade(Categoria categoria) {
-		this.especialidades.add(categoria);
-	}
+    public void novaEspecialidade(Categoria categoria) {
+        this.especialidades.add(categoria);
+    }
 
     public String getNome() {
         return nome;
@@ -52,28 +53,34 @@ public class Collaborator {
         this.jornadaDiaria = jornadaDiaria;
     }
 
-	public List<Categoria> getEspecialidades() {
-		return especialidades;
-	}
+    public List<Categoria> getEspecialidades() {
+        return especialidades;
+    }
 
-	public Attendance getTarefaAtual() {
-		return tarefaAtual;
-	}
+    public Attendance getTarefaAtual() {
+        return tarefaAtual;
+    }
 
-	public void setTarefaAtual(Attendance tarefaAtual) {
-		this.tarefaAtual = tarefaAtual;
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-//				 long duration = tarefaAtual.getHoraFimAtendimento().minus(tarefaAtual.gethor).getTimeInMillis() - tarefaAtual.getDataInicioAtendimento().getTimeInMillis();
-				long duration = 100000000;
-				for (int i = 0; i < duration; i++) {
-					//
-				}
-				Collaborator.this.tarefaAtual = null;
-				System.out.println("Terminou...");
-			}
-		}).start();
-	}
+    public void setTarefaAtual(Attendance tarefaAtual) {
+        this.tarefaAtual = tarefaAtual;
+//		System.out.println("Iniciou... - " + getNome() + " : " + getTarefaAtual());
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    long duration = Duration.between(tarefaAtual.getHoraInicioAtendimento(), tarefaAtual.getHoraFimAtendimento()).toMinutes() * 60;
+//                System.out.println("Duração: " + duration + " na tarefa " + tarefaAtual);
+                    for (int i = 0; i < duration; i++) {
+                        //
+                    }
+//                    Thread.sleep(duration);
+                    Collaborator.this.tarefaAtual = null;
+//				System.out.println("Terminou... - " + getNome() + " : " + getTarefaAtual());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
 
 }
