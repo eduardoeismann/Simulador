@@ -4,12 +4,13 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.time.LocalTime;
-import java.util.Arrays;
-import java.util.Calendar;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JFileChooser;
 
-import feevale.attendance.Attendance;
+import feevale.entities.Attendance;
+import feevale.entities.Categoria;
 
 public class ReadFile {
 	/**
@@ -20,29 +21,35 @@ public class ReadFile {
 	 *     simulador.
 	 *     
 	**/
-	
+
 	private static final String DELIMITADOR = ";";
 	
+	private List<Attendance> listAtendimento;
+
 	public ReadFile() {
 		BufferedReader leDados = null;
 		String linha = null;
-		
+
 		try {
 			JFileChooser arquivo = new JFileChooser();
-			arquivo.setDialogTitle( "Selecione o arquivo de dados" );
-			arquivo.setDialogType( JFileChooser.OPEN_DIALOG );
-			arquivo.setApproveButtonText( "OK" );
-			arquivo.setFileSelectionMode( JFileChooser.FILES_ONLY );
-			arquivo.setMultiSelectionEnabled( true );
-			arquivo.showOpenDialog( arquivo );
+			arquivo.setDialogTitle("Selecione o arquivo de dados");
+			arquivo.setDialogType(JFileChooser.OPEN_DIALOG);
+			arquivo.setApproveButtonText("OK");
+			arquivo.setFileSelectionMode(JFileChooser.FILES_ONLY);
+			arquivo.setMultiSelectionEnabled(true);
+			arquivo.showOpenDialog(arquivo);
+
+			leDados = new BufferedReader(new InputStreamReader(new FileInputStream(arquivo.getSelectedFile())));
 			
-			leDados = new BufferedReader( new InputStreamReader( new FileInputStream( arquivo.getSelectedFile() ) ) );
+			// leDados = new BufferedReader(new InputStreamReader(new FileInputStream(new File("/Users/andresschultz/Desktop/semana_1.csv"))));
 			
+			this.listAtendimento = new ArrayList<>();
+
 			while( ( linha = leDados.readLine() ) != null ) {
 				String[] dadosUsuario = linha.split( DELIMITADOR );
 				Attendance atendimento = new Attendance();
 				atendimento.setProblemaAtendido(dadosUsuario[0]);
-				atendimento.setCategoria(dadosUsuario[1]);
+				atendimento.setCategoria(Categoria.getByString(dadosUsuario[1]));
 				atendimento.setPrioridade(Integer.valueOf(dadosUsuario[2]));
 				atendimento.setHoraInicioAtendimento(LocalTime.parse(dadosUsuario[3]));
 				atendimento.setHoraFimAtendimento(LocalTime.parse(dadosUsuario[4]));
@@ -52,7 +59,8 @@ public class ReadFile {
 				atendimento.setNomeColaborador(dadosUsuario[8]);
 
 //				System.out.println( Arrays.toString( dadosUsuario ) );
-                System.out.println(atendimento.toString());
+				this.listAtendimento.add(atendimento);
+				// System.out.println(atendimento.toString());
 			}
 
 			leDados.close();
@@ -63,5 +71,9 @@ public class ReadFile {
 		}
 		
 	}
-	
+
+	public List<Attendance> getListAtendimento() {
+		return listAtendimento;
+	}
+
 }
