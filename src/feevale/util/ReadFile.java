@@ -30,18 +30,17 @@ public class ReadFile {
 		String linha = null;
 
 		try {
-//			JFileChooser arquivo = new JFileChooser();
-//			arquivo.setDialogTitle( "Selecione o arquivo de dados" );
-//			arquivo.setDialogType( JFileChooser.OPEN_DIALOG );
-//			arquivo.setApproveButtonText( "OK" );
-//			arquivo.setFileSelectionMode( JFileChooser.FILES_ONLY );
-//			arquivo.setMultiSelectionEnabled( true );
-//			arquivo.showOpenDialog( arquivo );
+			// JFileChooser arquivo = new JFileChooser();
+			// arquivo.setDialogTitle("Selecione o arquivo de dados");
+			// arquivo.setDialogType(JFileChooser.OPEN_DIALOG);
+			// arquivo.setApproveButtonText("OK");
+			// arquivo.setFileSelectionMode(JFileChooser.FILES_ONLY);
+			// arquivo.setMultiSelectionEnabled(true);
+			// arquivo.showOpenDialog(arquivo);
 
-			File file = new File("/Users/andresschultz/Desktop/semana_1.csv");
+			// leDados = new BufferedReader(new InputStreamReader(new FileInputStream(arquivo.getSelectedFile())));
 			
-//			leDados = new BufferedReader( new InputStreamReader( new FileInputStream( arquivo.getSelectedFile() ) ) );
-			leDados = new BufferedReader( new InputStreamReader(new FileInputStream(file)));
+			leDados = new BufferedReader(new InputStreamReader(new FileInputStream(new File("/Users/andresschultz/Desktop/semana_1.csv"))));
 			
 			this.listAtendimento = new ArrayList<>();
 
